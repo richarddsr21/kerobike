@@ -1,0 +1,543 @@
+export type ProductCategory =
+  | "Scooter elétrica"
+  | "Bike elétrica"
+  | "Moto elétrica"
+  | "Triciclo elétrico"
+
+export type ProductUse =
+  | "Urbano"
+  | "Trabalho"
+  | "Dia a dia"
+  | "Lazer"
+  | "Entrega"
+
+export type ProductBadge =
+  | "Mais vendido"
+  | "Destaque"
+  | "Novo"
+  | "Promoção"
+  | null
+
+export interface ProductSpec {
+  autonomy: number
+  maxSpeed: number
+  power: string
+  chargingTime: string
+  battery: string
+  weight: number
+  maxLoad: number
+  warranty: string
+}
+
+export interface Product {
+  id: string
+  name: string
+  description: string
+  longDescription: string
+  specs: ProductSpec
+  category: ProductCategory
+  use: ProductUse
+  badge: ProductBadge
+  images: string[]
+  price: string
+  priceNumber: number
+  featured: boolean
+  highlights: string[]
+}
+
+export const products: Product[] = [
+  {
+    id: "joy",
+    name: "Joy",
+    description: "Scooter elétrica compacta, ideal para o dia a dia sem burocracia.",
+    longDescription:
+      "A Joy é a porta de entrada perfeita no mundo da mobilidade elétrica. Com motor de 800W, bateria de lítio removível 60V 20Ah e autonomia de até 50km, ela cobre com folga os deslocamentos urbanos do cotidiano. Não exige CNH, emplacamento ou IPVA — basta carregar e andar.",
+    specs: {
+      autonomy: 50,
+      maxSpeed: 32,
+      power: "800W",
+      chargingTime: "5-6h",
+      battery: "60V 20Ah Lítio",
+      weight: 70,
+      maxLoad: 180,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Dia a dia",
+    badge: null,
+    images: ["/images/joy.jpg"],
+    price: "A partir de R$ 7.990",
+    priceNumber: 7990,
+    featured: false,
+    highlights: [
+      "Sem CNH e sem emplacamento",
+      "Bateria lítio removível",
+      "Banco duplo confortável",
+      "Alarme com trava de roda",
+      "Farol LED",
+      "Painel digital",
+    ],
+  },
+  {
+    id: "super-joy",
+    name: "Super Joy",
+    description: "Versão aprimorada da Joy com maior autonomia e design mais agressivo.",
+    longDescription:
+      "A Super Joy eleva o padrão da linha com 800W de motor brushless e bateria de lítio 60V 20Ah que entrega até 60km de autonomia por carga. Design robusto com banco confortável para dois, suspensão dupla e freio a disco compõem um conjunto que equilibra praticidade e estilo para quem circula pela cidade todos os dias.",
+    specs: {
+      autonomy: 60,
+      maxSpeed: 32,
+      power: "800W",
+      chargingTime: "5-6h",
+      battery: "60V 20Ah Lítio",
+      weight: 72,
+      maxLoad: 180,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Urbano",
+    badge: "Mais vendido",
+    images: ["/images/super-joy.jpg"],
+    price: "A partir de R$ 8.490",
+    priceNumber: 8490,
+    featured: true,
+    highlights: [
+      "Motor 800W brushless silencioso",
+      "Banco duplo com encosto traseiro",
+      "Freio a disco dianteiro",
+      "Suspensão dupla",
+      "Alarme antifurto integrado",
+      "Carregador bivolt incluso",
+    ],
+  },
+  {
+    id: "jet",
+    name: "Jet",
+    description: "Design esportivo e motor 1000W para quem quer mais potência no urbano.",
+    longDescription:
+      "A Jet entrega 1000W de potência em um visual compacto e agressivo. Com bateria de lítio 60V 20Ah e autonomia de até 45km, é classificada como autopropelido — sem necessidade de CNH ou emplacamento conforme a Resolução nº 996/2023 do Contran. Ótima opção para quem quer desempenho sem burocracia.",
+    specs: {
+      autonomy: 45,
+      maxSpeed: 32,
+      power: "1000W",
+      chargingTime: "6-8h",
+      battery: "60V 20Ah Lítio",
+      weight: 75,
+      maxLoad: 180,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Urbano",
+    badge: null,
+    images: ["/images/jet.jpg"],
+    price: "A partir de R$ 8.990",
+    priceNumber: 8990,
+    featured: false,
+    highlights: [
+      "Motor 1000W alta potência",
+      "Design esportivo compacto",
+      "Bateria lítio 60V 20Ah",
+      "Sem CNH nem emplacamento",
+      "Carregador bivolt",
+      "Painel digital completo",
+    ],
+  },
+  {
+    id: "giga",
+    name: "Giga",
+    description: "Maior bateria da linha: 60V 24Ah para até 50km de autonomia real.",
+    longDescription:
+      "O Giga foi pensado para quem percorre distâncias maiores no dia a dia. Com bateria de lítio 60V 24Ah removível e motor de 1000W, entrega até 50km de autonomia e aceita acionamento por chave, cartão ou pulseira NFC. Freio a disco, suspensão dupla e alarme antifurto completam o pacote.",
+    specs: {
+      autonomy: 50,
+      maxSpeed: 32,
+      power: "1000W",
+      chargingTime: "6-8h",
+      battery: "60V 24Ah Lítio",
+      weight: 78,
+      maxLoad: 180,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Urbano",
+    badge: "Destaque",
+    images: ["/images/giga.jpg"],
+    price: "A partir de R$ 9.490",
+    priceNumber: 9490,
+    featured: true,
+    highlights: [
+      "Bateria 60V 24Ah (maior autonomia)",
+      "Motor 1000W brushless",
+      "Partida por NFC, cartão ou chave",
+      "Freio a disco hidráulico",
+      "Suspensão dupla",
+      "Alarme antifurto com bloqueio",
+    ],
+  },
+  {
+    id: "x11",
+    name: "X11",
+    description: "Motor 1000W e velocidade de até 32km/h para quem não abre mão de performance.",
+    longDescription:
+      "O X11 é o modelo de alta performance da linha: motor de 1000W, pneus largos para máxima estabilidade e capacidade para até 200kg. Atinge 32km/h e oferece autonomia de até 50km com sua bateria de lítio 60V 20Ah. Para quem precisa de velocidade e segurança ao mesmo tempo.",
+    specs: {
+      autonomy: 50,
+      maxSpeed: 32,
+      power: "1000W",
+      chargingTime: "6-8h",
+      battery: "60V 20Ah Lítio",
+      weight: 85,
+      maxLoad: 200,
+      warranty: "12 meses",
+    },
+    category: "Moto elétrica",
+    use: "Urbano",
+    badge: "Mais vendido",
+    images: ["/images/x11.jpg"],
+    price: "A partir de R$ 13.990",
+    priceNumber: 13990,
+    featured: true,
+    highlights: [
+      "Motor 2000W alta performance",
+      "Velocidade até 32km/h",
+      "Pneus largos para estabilidade",
+      "Capacidade de carga 200kg",
+      "Freios a disco duplos",
+      "Painel digital avançado",
+    ],
+  },
+  {
+    id: "x12",
+    name: "X12",
+    description: "Scooter urbana com proteção IP65 e alarme com trava de motor.",
+    longDescription:
+      "A X12 combina um motor de 1000W com bateria de lítio 60V 20Ah e autonomia de até 50km. Seu diferencial está nos detalhes: proteção IP65 contra água, farol LED com 3 intensidades, alarme antifurto com trava de motor e painel digital. Suporta até 200kg e recarrega completamente em 6-7 horas.",
+    specs: {
+      autonomy: 50,
+      maxSpeed: 32,
+      power: "1000W",
+      chargingTime: "6-7h",
+      battery: "60V 20Ah Lítio",
+      weight: 75,
+      maxLoad: 200,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Urbano",
+    badge: null,
+    images: ["/images/x12.jpg"],
+    price: "A partir de R$ 10.490",
+    priceNumber: 10490,
+    featured: false,
+    highlights: [
+      "Proteção IP65 contra água",
+      "Farol LED 3 intensidades",
+      "Alarme com trava de motor",
+      "Bateria 60V 20Ah removível",
+      "Capacidade 200kg",
+      "Painel digital completo",
+    ],
+  },
+  {
+    id: "tank",
+    name: "Tank",
+    description: "Bateria 60V 32Ah e até 64km de autonomia — o maior alcance da linha.",
+    longDescription:
+      "O Tank foi construído para quem precisa de autonomia acima de qualquer coisa. Com a bateria de lítio 60V 32Ah — a maior da linha — entrega até 64km por carga e suporta dois ocupantes com capacidade total de 200kg. Motor de 1000W, freio a disco e design robusto fazem do Tank a escolha certa para longas jornadas urbanas.",
+    specs: {
+      autonomy: 64,
+      maxSpeed: 32,
+      power: "1000W",
+      chargingTime: "4-8h",
+      battery: "60V 32Ah Lítio",
+      weight: 88,
+      maxLoad: 200,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Dia a dia",
+    badge: "Destaque",
+    images: ["/images/tank.jpg"],
+    price: "A partir de R$ 11.990",
+    priceNumber: 11990,
+    featured: true,
+    highlights: [
+      "Maior autonomia do lineup: 64km",
+      "Bateria 60V 32Ah lítio",
+      "Capacidade total 200kg",
+      "Motor 1000W brushless",
+      "Freio a disco",
+      "Design robusto e estável",
+    ],
+  },
+  {
+    id: "dot",
+    name: "Dot",
+    description: "Partida por NFC, cartão, chave ou pulseira — tecnologia e praticidade.",
+    longDescription:
+      "O Dot é o modelo mais tecnológico da linha: aceita quatro formas de partida (NFC, cartão, chave e pulseira), tem freios hidráulicos dianteiro e traseiro e banco contínuo confortável para dois. Motor 1000W, bateria de lítio 60V 20Ah removível e autonomia de até 50km completam um conjunto difícil de bater nessa faixa de preço.",
+    specs: {
+      autonomy: 50,
+      maxSpeed: 32,
+      power: "1000W",
+      chargingTime: "6-8h",
+      battery: "60V 20Ah Lítio",
+      weight: 75,
+      maxLoad: 180,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Urbano",
+    badge: null,
+    images: ["/images/dot.jpg"],
+    price: "A partir de R$ 9.990",
+    priceNumber: 9990,
+    featured: false,
+    highlights: [
+      "4 formas de partida (NFC, cartão, chave, pulseira)",
+      "Freio hidráulico dianteiro e traseiro",
+      "Banco contínuo para 2 pessoas",
+      "Bateria lítio 60V 20Ah removível",
+      "Motor 1000W brushless",
+      "Suspensão dupla",
+    ],
+  },
+  {
+    id: "big-tri",
+    name: "Big Tri",
+    description: "Triciclo elétrico para 3 pessoas com baú, marcha ré e motor 1000W.",
+    longDescription:
+      "O Big Tri é a opção perfeita para famílias e profissionais que precisam de estabilidade e capacidade. Com três rodas, acomoda até 3 pessoas e oferece baú integrado, marcha ré e alarme antifurto. Motor de 1000W, bateria lítio 60V 20Ah e autonomia de até 55km — sem necessidade de CNH ou emplacamento.",
+    specs: {
+      autonomy: 55,
+      maxSpeed: 32,
+      power: "1000W",
+      chargingTime: "5-8h",
+      battery: "60V 20Ah Lítio",
+      weight: 115,
+      maxLoad: 180,
+      warranty: "12 meses",
+    },
+    category: "Triciclo elétrico",
+    use: "Lazer",
+    badge: null,
+    images: ["/images/big-tri.jpg"],
+    price: "A partir de R$ 12.990",
+    priceNumber: 12990,
+    featured: false,
+    highlights: [
+      "3 rodas — estabilidade máxima",
+      "Acomoda até 3 pessoas",
+      "Baú integrado incluso",
+      "Marcha ré",
+      "Motor 1000W brushless",
+      "Sem CNH nem emplacamento",
+    ],
+  },
+  {
+    id: "duos-bee",
+    name: "Duos Bee",
+    description: "Scooter compacta e acessível da Duos, ideal para curtas distâncias.",
+    longDescription:
+      "A Duos Bee é a opção de entrada da marca Duos: motor de 500W, bateria 48V 20Ah e visual retrô que agrada tanto pelo design quanto pelo custo de operação quase zero. Com autonomia de até 40km e capacidade para 120kg, é ideal para quem está começando no mundo elétrico sem abrir mão do estilo.",
+    specs: {
+      autonomy: 40,
+      maxSpeed: 35,
+      power: "500W",
+      chargingTime: "6-8h",
+      battery: "48V 20Ah",
+      weight: 65,
+      maxLoad: 120,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Dia a dia",
+    badge: null,
+    images: ["/images/duos-bee.jpg"],
+    price: "A partir de R$ 6.490",
+    priceNumber: 6490,
+    featured: false,
+    highlights: [
+      "Design retrô charmoso",
+      "Motor 500W econômico",
+      "Cestinha frontal inclusa",
+      "Alarme com trava integrado",
+      "Freio a disco dianteiro",
+      "Sem CNH nem emplacamento",
+    ],
+  },
+  {
+    id: "duos-neo",
+    name: "Duos Neo",
+    description: "Scooter 1000W da Duos com freio hidráulico, NFC e USB onboard.",
+    longDescription:
+      "A Duos Neo é o modelo premium da Duos: motor de 1000W, bateria de lítio removível 60V 24Ah com autonomia de até 55km, freio hidráulico dianteiro e traseiro, partida por NFC e porta USB integrada. Design moderno estilo motoneta com banco para dois e suporte de 180kg. A melhor relação custo-benefício da marca.",
+    specs: {
+      autonomy: 55,
+      maxSpeed: 32,
+      power: "1000W",
+      chargingTime: "5-8h",
+      battery: "60V 24Ah Lítio",
+      weight: 75,
+      maxLoad: 180,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Urbano",
+    badge: "Novo",
+    images: ["/images/duos-neo.jpg"],
+    price: "A partir de R$ 9.990",
+    priceNumber: 9990,
+    featured: true,
+    highlights: [
+      "Motor 1000W brushless",
+      "Bateria lítio 60V 24Ah removível",
+      "Freio hidráulico dianteiro e traseiro",
+      "Partida por NFC",
+      "Porta USB integrada",
+      "Design moderno estilo motoneta",
+    ],
+  },
+  {
+    id: "eko-7",
+    name: "Eko 7",
+    description: "Scooter Duos com cestinha removível e sistema NFC com alarme integrado.",
+    longDescription:
+      "A Eko 7 da Duos traz motor de 800W, bateria 48V 20Ah e autonomia de até 45km em um visual de motoneta baixa de fácil acesso. Seu sistema de segurança aceita chave com alarme e cartão NFC, e o cesto dianteiro removível adiciona praticidade para o dia a dia. Suspensão telescópica dianteira e quadro em aço reforçado garantem conforto e durabilidade.",
+    specs: {
+      autonomy: 45,
+      maxSpeed: 32,
+      power: "800W",
+      chargingTime: "5-7h",
+      battery: "48V 20Ah",
+      weight: 70,
+      maxLoad: 150,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Dia a dia",
+    badge: null,
+    images: ["/images/eko-7.jpg"],
+    price: "A partir de R$ 7.490",
+    priceNumber: 7490,
+    featured: false,
+    highlights: [
+      "Chave com alarme e NFC",
+      "Cestinha dianteira removível",
+      "Suspensão telescópica dianteira",
+      "Quadro em aço reforçado",
+      "Motor 800W brushless",
+      "Plataforma baixa — fácil acesso",
+    ],
+  },
+  {
+    id: "e-trek",
+    name: "E-Trek",
+    description: "Scooter Duos estilo motoneta com motor 1000W e autonomia de até 50km.",
+    longDescription:
+      "A E-Trek da Duos combina estilo de motoneta clássica com propulsão 100% elétrica. Motor de 1000W, bateria 48V 20Ah e autonomia de até 50km fazem dela uma excelente companheira para o trânsito da cidade. Classificada como autopropelido conforme a legislação vigente — sem necessidade de CNH, emplacamento ou IPVA.",
+    specs: {
+      autonomy: 50,
+      maxSpeed: 32,
+      power: "1000W",
+      chargingTime: "6-8h",
+      battery: "48V 20Ah",
+      weight: 72,
+      maxLoad: 120,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Urbano",
+    badge: null,
+    images: ["/images/e-trek.jpg"],
+    price: "A partir de R$ 8.490",
+    priceNumber: 8490,
+    featured: false,
+    highlights: [
+      "Estilo motoneta clássica",
+      "Motor 1000W brushless",
+      "Sem CNH nem emplacamento",
+      "Freio a disco",
+      "Farol e lanterna LED",
+      "Bateria 48V 20Ah",
+    ],
+  },
+  {
+    id: "s8",
+    name: "S8",
+    description: "Motor 2000W e velocidade até 60km/h — a moto elétrica mais potente da loja.",
+    longDescription:
+      "A S8 é o topo de linha em performance: motor de 2000W, bateria de lítio 60V 25Ah e velocidade máxima de 60km/h, com autonomia de até 50km por carga. Pneus largos de 10 polegadas e suspensão dupla garantem estabilidade mesmo em ritmo acelerado. A escolha de quem quer o melhor em mobilidade elétrica.",
+    specs: {
+      autonomy: 50,
+      maxSpeed: 60,
+      power: "2000W",
+      chargingTime: "6-8h",
+      battery: "60V 25Ah Lítio",
+      weight: 85,
+      maxLoad: 180,
+      warranty: "12 meses",
+    },
+    category: "Moto elétrica",
+    use: "Urbano",
+    badge: "Destaque",
+    images: ["/images/s8.png"],
+    price: "A partir de R$ 14.990",
+    priceNumber: 14990,
+    featured: true,
+    highlights: [
+      "Motor 2000W topo de linha",
+      "Velocidade até 60km/h",
+      "Bateria lítio 60V 25Ah removível",
+      "Pneu aro 10\" largo",
+      "Suspensão dupla",
+      "Freio a disco dianteiro e traseiro",
+    ],
+  },
+  {
+    id: "m-bee",
+    name: "M Bee",
+    description: "Scooter compacta com motor 800W e design urbano moderno.",
+    longDescription:
+      "A M Bee une compacidade e performance em um modelo voltado para a mobilidade urbana do dia a dia. Com motor de 800W, bateria de lítio removível e autonomia de até 45km, ela se encaixa com facilidade na rotina de quem precisa de praticidade sem abrir mão do visual. Leve, silenciosa e econômica — sem CNH, sem emplacamento.",
+    specs: {
+      autonomy: 45,
+      maxSpeed: 32,
+      power: "800W",
+      chargingTime: "6-8h",
+      battery: "60V 20Ah Lítio",
+      weight: 68,
+      maxLoad: 130,
+      warranty: "12 meses",
+    },
+    category: "Scooter elétrica",
+    use: "Dia a dia",
+    badge: null,
+    images: ["/images/m-bee.jpg"],
+    price: "A partir de R$ 7.990",
+    priceNumber: 7990,
+    featured: false,
+    highlights: [
+      "Design urbano compacto",
+      "Motor 800W brushless",
+      "Bateria lítio removível",
+      "Sem CNH nem emplacamento",
+      "Freio a disco",
+      "Painel digital",
+    ],
+  },
+]
+
+export function getProductById(id: string): Product | undefined {
+  return products.find((p) => p.id === id)
+}
+
+export function getFeaturedProducts(): Product[] {
+  return products.filter((p) => p.featured)
+}
+
+export function getSimilarProducts(product: Product, limit = 3): Product[] {
+  return products
+    .filter((p) => p.id !== product.id && p.category === product.category)
+    .slice(0, limit)
+}

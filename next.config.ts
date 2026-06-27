@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  images: {
+    domains: [],
+    unoptimized: false,
+  },
+  experimental: {
+    optimizePackageImports: ["lucide-react", "react-icons"],
+  },
+}
 
-export default nextConfig;
+export default nextConfig
