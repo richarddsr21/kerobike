@@ -72,7 +72,6 @@ export function MaisVendidos() {
               </Link>
               <div className="pt-4 flex flex-col gap-3">
                 <h3 className="font-black text-lg tracking-tight">{m.name}</h3>
-                <div className="text-3xl font-black text-primary">{m.price}</div>
                 <Link
                   href={getWhatsappUrlProduto(m.name)}
                   target="_blank"

@@ -71,7 +71,6 @@ export function ProductCard({ product, view, onCompareToggle, isComparing }: Pro
           </div>
 
           <div className="mt-auto flex items-center justify-between gap-4 pt-3 border-t border-border">
-            <span className="font-bold text-primary text-sm">{product.price}</span>
             <div className="flex gap-2">
               {onCompareToggle && (
                 <button
@@ -158,7 +157,6 @@ export function ProductCard({ product, view, onCompareToggle, isComparing }: Pro
         </div>
 
         <div className="mt-auto pt-3 border-t border-border flex flex-col gap-2">
-          <span className="text-sm font-bold text-primary">{product.price}</span>
           <div className="flex gap-2">
             {onCompareToggle && (
               <button
@@ -183,6 +181,9 @@ export function ProductCard({ product, view, onCompareToggle, isComparing }: Pro
               Orçamento
             </a>
           </div>
+          <p className="text-[10px] text-muted-foreground text-center font-medium tracking-wide">
+            Até <span className="text-primary font-bold">21x</span> sem entrada
+          </p>
         </div>
       </div>
     </div>

@@ -90,8 +90,6 @@ export default async function ProductPage({ params }: Props) {
 
             <p className="text-muted-foreground leading-relaxed">{product.longDescription}</p>
 
-            <div className="text-2xl font-black text-primary">{product.price}</div>
-
             <a
               href={getWhatsappUrlProduto(product.name)}
               target="_blank"
@@ -101,6 +99,10 @@ export default async function ProductPage({ params }: Props) {
               <FaWhatsapp className="w-5 h-5" />
               Pedir orçamento via WhatsApp
             </a>
+
+            <p className="text-xs text-muted-foreground text-center font-medium tracking-wide">
+              Parcelamos em até <span className="text-primary font-bold">21x</span> — consulte condições no orçamento
+            </p>
 
             {/* Highlights */}
             <div className="bg-card border border-border rounded-sm p-5">

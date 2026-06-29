@@ -17,7 +17,6 @@ interface ComparatorBarProps {
 const specRows = [
   { label: "Categoria", key: (p: Product) => p.category },
   { label: "Uso", key: (p: Product) => p.use },
-  { label: "Preço", key: (p: Product) => p.price },
   { label: "Autonomia", key: (p: Product) => `${p.specs.autonomy}km` },
   { label: "Vel. máxima", key: (p: Product) => `${p.specs.maxSpeed}km/h` },
   { label: "Potência", key: (p: Product) => p.specs.power },

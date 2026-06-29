@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-const texto = "BIKES ELÉTRICAS · SCOOTERS ELÉTRICAS · MOTOS ELÉTRICAS · TRICICLOS · KERO BIKE · MOBILIDADE ELÉTRICA · "
+const texto = "BIKES ELÉTRICAS · SCOOTERS ELÉTRICAS · MOTOS ELÉTRICAS · TRICICLOS · KERO BIKE · MOBILIDADE ELÉTRICA · PARCELAMOS EM ATÉ 21X · "
 const items = [texto, texto]
 
 export function MarqueeStrip() {

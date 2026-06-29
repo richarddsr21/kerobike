@@ -26,13 +26,6 @@ const speeds = [
   { label: "Até 60km/h", value: "60" },
   { label: "80km/h+", value: "80+" },
 ]
-const prices = [
-  { label: "Até R$ 8.000", value: "8000" },
-  { label: "Até R$ 12.000", value: "12000" },
-  { label: "Até R$ 16.000", value: "16000" },
-  { label: "Acima de R$ 16.000", value: "16001+" },
-]
-
 const emptyFilters: FilterState = {
   search: "",
   category: "",
@@ -161,9 +154,6 @@ export function CatalogFilters({
         <RadioGroup options={speeds} value={filters.speed} onChange={set("speed")} />
       </FilterSection>
 
-      <FilterSection title="Faixa de preço">
-        <RadioGroup options={prices} value={filters.priceRange} onChange={set("priceRange")} />
-      </FilterSection>
     </div>
   )
 
