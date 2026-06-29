@@ -95,7 +95,7 @@ export function MaisVendidos() {
               Ver todos os modelos
             </span>
             <span className="text-[11px] font-bold text-primary-foreground/60 uppercase tracking-widest">
-              15 modelos disponíveis
+              22 modelos disponíveis
             </span>
           </div>
           <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 translate-x-1 group-hover:translate-x-3 transition-transform duration-200 shrink-0" />
